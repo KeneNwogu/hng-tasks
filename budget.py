@@ -1,6 +1,6 @@
 class Budget:
     # Hard-coded total balance
-    budget_balance = 500000
+    budget_balance = int(input("Enter your budget for the year: "))
     budgets = [] # stores a static list of all instances of the Budget class
 
     def __init__(self, category: str, balance: int):
@@ -88,4 +88,4 @@ Budget.transfer(electricity, food, 20000)
 Budget.transfer(food, electricity, 20000)
 
 print("\n \n")
-Budget.print_budget()
+Budget.print_budget()     
