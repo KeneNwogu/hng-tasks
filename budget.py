@@ -1,5 +1,4 @@
 class Budget:
-    # Hard-coded total balance
     budget_balance = int(input("Enter your budget for the year: "))
     budgets = [] # stores a static list of all instances of the Budget class
 
@@ -64,28 +63,29 @@ class Budget:
             total += budget.balance
         return total
 
-food = Budget('food', 50000) 
-clothing = Budget('clothing', 45000)
-entertainment = Budget('entertainment', 2000)
-electricity = Budget('electricity', 100000)
+# TESTS - Uncomment to test the Budget class, code asks for input of budget you want to allocate first
+# To test the class with these use cases, the total budget you input for the year must be greater than 300,000 for it to work.
+
+# food = Budget('food', 50000) 
+# clothing = Budget('clothing', 45000)
+# entertainment = Budget('entertainment', 2000)
+# electricity = Budget('electricity', 100000)
 
 # Takes 78 from the Main budget and adds it to food
-Budget.deposit(food, 78)
+# Budget.deposit(food, 78)
 
 # puts 78 into the general budget
-food.withdraw(100)
+# food.withdraw(100)
 
 # Transfer 40,000 to clothing's budget from food
-Budget.transfer(food, clothing, 40000)
+# Budget.transfer(food, clothing, 40000)
 
-# won't be able to transfer because food's budget is lesser than amount to be transferred
-Budget.transfer(food, electricity, 20000)
+# Budget.transfer(food, electricity, 20000)
 
 # Transfer 20,000 to food's budget from electricity
-Budget.transfer(electricity, food, 20000)
+# Budget.transfer(electricity, food, 20000)
 
-# would now be able to transfer because food's budget is greater than 20000
-Budget.transfer(food, electricity, 20000)
+# Budget.transfer(food, electricity, 20000)
 
-print("\n \n")
+# print("\n \n")
 Budget.print_budget()     
